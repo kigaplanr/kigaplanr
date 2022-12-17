@@ -8,8 +8,8 @@ defmodule KigaplanrWeb.ParentsController do
   def create(conn, _params) do
     if conn.params["password"] == "admin" do
       conn
-      |> put_flash(:info, "Welcome!")
-      |> redirect(to: "/")
+      |> put_flash(:info, "Login successful")
+      |> redirect(to: "/info")
     else
       conn
       |> put_flash(:error, "Wrong password")
