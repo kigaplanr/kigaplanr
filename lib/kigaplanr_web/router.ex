@@ -19,6 +19,7 @@ defmodule KigaplanrWeb.Router do
 
     get "/", PageController, :index
     get "/parents", ParentsController, :index
+    post "/parents", ParentsController, :create
   end
 
   # Other scopes may use custom stacks.
