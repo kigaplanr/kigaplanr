@@ -18,8 +18,11 @@ defmodule KigaplanrWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+
     get "/parents", ParentsController, :index
     post "/parents", ParentsController, :create
+
+    get "/info", InfoController, :info
   end
 
   # Other scopes may use custom stacks.
