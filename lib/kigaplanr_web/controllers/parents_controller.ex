@@ -5,8 +5,6 @@ defmodule KigaplanrWeb.ParentsController do
     render(conn, "parents.html")
   end
 
-  # create a function called create, that is called when a POST request is made to /parents
-  # whe the entered password is "admin", redirect to /, else send an alert with "Wrong password"
   def create(conn, _params) do
     if conn.params["password"] == "admin" do
       conn
