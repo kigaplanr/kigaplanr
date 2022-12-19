@@ -13,5 +13,4 @@ defmodule Kigaplanr.Parents do
     |> cast(params, [:parent_name])
     |> validate_required([:parent_name])
   end
-
 end
