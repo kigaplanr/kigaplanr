@@ -22,6 +22,8 @@ defmodule KigaplanrWeb.Router do
     get "/parents", ParentsController, :index
     post "/parents", ParentsController, :create
 
+    get "/teachers", TeachersController, :index
+
     get "/info", InfoController, :info
   end
 
