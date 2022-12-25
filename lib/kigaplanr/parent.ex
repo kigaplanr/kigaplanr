@@ -1,16 +1,11 @@
 defmodule Kigaplanr.Parents do
-  use Ecto.Schema
-  import Ecto.Changeset
-  alias __MODULE__
+  alias Kigaplanr.Repo
+  alias Kigaplanr.Parents.Generate
 
-  schema "parents" do
-    field :parent_name, :string
-    has_many :posts, Kigaplanr.Posts
+  def generate_parent(attrs \\ %{}) do
+    %Generate{}
+    |> Generate.changeset(attrs)
+    |> Repo.insert()
   end
 
-  def changeset(parent, params \\ %{}) do
-    parent
-    |> cast(params, [:parent_name])
-    |> validate_required([:parent_name])
-  end
 end
