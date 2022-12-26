@@ -1,4 +1,4 @@
-defmodule KigaplanrWeb.TeachersController do
+defmodule KigaplanrWeb.AdminController do
   use KigaplanrWeb, :controller
   alias Kigaplanr.Parents.Generate
   alias Kigaplanr.Parents
@@ -6,15 +6,15 @@ defmodule KigaplanrWeb.TeachersController do
 
   def index(conn, _params) do
     changeset = Generate.changeset(%Generate{}, %{})
-    render(conn, "teachers.html", changeset: changeset)
+    render(conn, "admin.html", changeset: changeset)
   end
 
-  def generate(conn, %{"generate" => parent_params}) do
+  def create(conn, %{"generate" => parent_params}) do
     case Parents.generate_parent(parent_params) do
       {:ok, _} ->
         conn
         |> put_flash(:info, "Message Sent!")
-        |> redirect(to: Routes.parents_path(conn, :index))
+        |> redirect(to: Routes.admin_path(conn, :index))
       {:error, %Ecto.Changeset{} = changeset} ->
         conn = put_flash(conn, :error, "Error Sending!")
         render(conn, "index.html", changeset: changeset)

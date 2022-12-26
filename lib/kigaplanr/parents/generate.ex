@@ -5,7 +5,7 @@ defmodule Kigaplanr.Parents.Generate do
   alias __MODULE__
 
   schema "parents" do
-    field :name, :string
+    field :parent_name, :string
   end
 
   def changeset(%Generate{} = parent, attrs) do
