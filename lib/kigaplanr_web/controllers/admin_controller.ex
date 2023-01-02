@@ -1,8 +1,8 @@
 defmodule KigaplanrWeb.AdminController do
-  use KigaplanrWeb, :controller
   alias Kigaplanr.Parents.Generate
   alias Kigaplanr.Parents
 
+  use KigaplanrWeb, :controller
 
   def index(conn, _params) do
     changeset = Generate.changeset(%Generate{}, %{})

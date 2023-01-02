@@ -4,7 +4,7 @@ defmodule Kigaplanr.Parents.Generate do
   import Ecto.Changeset
   alias __MODULE__
 
-  schema "parents" do
+  schema "parent_user" do
     field :parent_name, :string
   end
 
