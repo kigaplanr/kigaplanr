@@ -3,7 +3,8 @@ defmodule Kigaplanr.Repo.Migrations.CreateTeacherUser do
 
   def change do
     create table(:teacher_user) do
-      add :teacher_name, :string
+      add :admin_name, :string
+      add :password_hash, :string
     end
   end
 end

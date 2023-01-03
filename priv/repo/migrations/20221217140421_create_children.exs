@@ -3,7 +3,9 @@ defmodule Kigaplanr.Repo.Migrations.CreateChildren do
 
   def change do
     create table(:children) do
-      add :child_name, :string
+      add :first_name, :string
+      add :last_name, :string
+      add :parent_name, :string
     end
   end
 end

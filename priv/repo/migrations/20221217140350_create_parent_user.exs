@@ -3,7 +3,9 @@ defmodule Kigaplanr.Repo.Migrations.CreateParentUser do
 
   def change do
     create table(:parent_user) do
-      add :parent_name, :string
+      add :first_name, :string
+      add :last_name, :string
+      add :child_name, :string #this needs to be related to children_table
     end
   end
 end
