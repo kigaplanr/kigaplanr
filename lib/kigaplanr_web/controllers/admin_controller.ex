@@ -15,10 +15,10 @@ defmodule KigaplanrWeb.AdminController do
         conn
         |> put_flash(:info, "Message Sent!")
         |> redirect(to: Routes.admin_path(conn, :index))
+
       {:error, %Ecto.Changeset{} = changeset} ->
         conn = put_flash(conn, :error, "Error Sending!")
         render(conn, "index.html", changeset: changeset)
     end
   end
-
 end

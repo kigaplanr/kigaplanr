@@ -7,7 +7,6 @@ import Config
 # any compile-time configuration in here, as it won't be applied.
 # The block below contains prod specific runtime configuration.
 
-
 # ## Using releases
 #
 # If you use `mix release`, you need to explicitly enable the server
@@ -20,7 +19,6 @@ import Config
 if System.get_env("PHX_SERVER") do
   config :kigaplanr, KigaplanrWeb.Endpoint, server: true
 end
-
 
 # Load the .env file for the environment (secret) keys.
 if Config.config_env() == :dev do

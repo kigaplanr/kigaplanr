@@ -7,5 +7,4 @@ defmodule Kigaplanr.Parents do
     |> Generate.changeset(attrs)
     |> Repo.insert()
   end
-
 end
